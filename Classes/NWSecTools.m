@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, NWCertType) {
     /** OS X Production. */
     kNWCertTypeMacProduction = 4,
     /** Simplified Certificate Handling. */
-    kNWCertTypeSimplified = 5,
+    //kNWCertTypeSimplified = 5,
     /** Web Push Production. */
     kNWCertTypeWebProduction = 6,
     /** VoIP Services. */
@@ -133,7 +133,7 @@ typedef NS_ENUM(NSInteger, NWCertType) {
         case kNWCertTypeIOSProduction:
         case kNWCertTypeMacProduction:
             return NWEnvironmentOptionProduction;
-        case kNWCertTypeSimplified:
+        //case kNWCertTypeSimplified:
         case kNWCertTypeWebProduction:
         case kNWCertTypeVoIPServices:
             return NWEnvironmentOptionAny;
@@ -151,7 +151,7 @@ typedef NS_ENUM(NSInteger, NWCertType) {
         case kNWCertTypeMacDevelopment:
         case kNWCertTypeIOSProduction:
         case kNWCertTypeMacProduction:
-        case kNWCertTypeSimplified:
+        //case kNWCertTypeSimplified:
         case kNWCertTypeWebProduction:
         case kNWCertTypeVoIPServices:
             return YES;
@@ -166,10 +166,11 @@ typedef NS_ENUM(NSInteger, NWCertType) {
 {
     switch (type) {
         case kNWCertTypeIOSDevelopment: return @"Apple Development IOS Push Services: ";
-        case kNWCertTypeIOSProduction: return @"Apple Production IOS Push Services: ";
+        //case kNWCertTypeIOSProduction: return @"Apple Production IOS Push Services: ";
+        case kNWCertTypeIOSProduction: return @"Apple Push Services: ";
         case kNWCertTypeMacDevelopment: return @"Apple Development Mac Push Services: ";
         case kNWCertTypeMacProduction: return @"Apple Production Mac Push Services: ";
-        case kNWCertTypeSimplified: return @"Apple Push Services: ";
+        //case kNWCertTypeSimplified: return @"Apple Push Services: ";
         case kNWCertTypeWebProduction: return @"Website Push ID: ";
         case kNWCertTypeVoIPServices:  return @"VoIP Services: ";
         case kNWCertTypeNone:
@@ -336,7 +337,7 @@ typedef NS_ENUM(NSInteger, NWCertType) {
         case kNWCertTypeIOSProduction:
         case kNWCertTypeMacProduction:
             return NWEnvironmentProduction;
-        case kNWCertTypeSimplified:
+        //case kNWCertTypeSimplified:
         case kNWCertTypeWebProduction:
         case kNWCertTypeVoIPServices:
         case kNWCertTypeNone:
